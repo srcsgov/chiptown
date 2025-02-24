@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChipTown</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .top-bar {
+            background-color: #7DDA58; /* Dark dark green */
+            display: flex;
+            align-items: center;
+            padding: 25px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .logo-container img {
+            width: 140px;
+            height: 140px;
+        }
+        .menu {
+            display: flex;
+            gap: 30px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: bold;
+            transition: 0.3s;
+            position: relative;
+        }
+        .menu a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu a:hover::after {
+            transform: scaleX(1);
+        }
+        .faq-section {
+            padding: 50px;
+        }
+        .faq-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-question {
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 20px;
+            background-color: #333;
+            border: none;
+            border-radius: 12px;
+            text-align: left;
+            width: 100%;
+            max-width: 700px;
+            margin: 10px auto;
+            transition: background-color 0.3s;
+        }
+        .faq-question:hover {
+            background-color: #444;
+        }
+        .faq-answer {
+            display: none;
+            padding: 20px;
+            background-color: #444;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 12px;
+            max-width: 700px;
+            margin: 10px auto;
+            text-align: left;
+        }
+        .faq-answer.show {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .footer {
+            margin-top: 40px;
+            padding: 15px;
+        }
+        .footer p {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            transition: 0.3s;
+            position: relative;
+        }
+        .footer a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        .footer a:hover::after {
+            transform: scaleX(1);
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .menu {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo-container">
+            <img src="logo.png" alt="ChipTown Logo">
+            <span style="margin-left: 20px;">CHIPTOWN</span>
+        </div>
+        <div class="menu">
+            <a href="news.html">NEWS</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <h2 class="faq-title">FAQ</h2>
+        <div class="faq-item">
+            <button class="faq-question">What is ChipTown?</button>
+            <div class="faq-answer">ChipTown is a revolutionary gaming platform bringing together technology and community-driven experiences.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How can I play ChipTown?</button>
+            <div class="faq-answer">You can play ChipTown by downloading the app on our official website or through supported app stores.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Is ChipTown free to play?</button>
+            <div class="faq-answer">Yes, ChipTown is free to play with in-app purchases available for additional content and features.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What devices can I play on?</button>
+            <div class="faq-answer">ChipTown is available on PC, Mac, and mobile devices including iOS and Android.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Can I play with friends?</button>
+            <div class="faq-answer">Yes, ChipTown supports multiplayer functionality, so you can play with friends in real-time.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How do I earn rewards?</button>
+            <div class="faq-answer">You can earn rewards through gameplay, completing challenges, and participating in events.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What languages are supported?</button>
+            <div class="faq-answer">ChipTown supports multiple languages, including English, Spanish, French, and more.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How do I report a bug?</button>
+            <div class="faq-answer">To report a bug, visit our support page and submit the issue through the contact form.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Can I customize my character?</button>
+            <div class="faq-answer">Yes, ChipTown offers a wide variety of customization options for your character.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Is ChipTown available globally?</button>
+            <div class="faq-answer">Yes, ChipTown is available globally and accessible from most regions.</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 ChipTown. All rights reserved.</p>
+        <a href="https://discord.com" target="_blank">DISCORD</a>
+    </div>
+
+    <script>
+        const questions = document.querySelectorAll('.faq-question');
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
